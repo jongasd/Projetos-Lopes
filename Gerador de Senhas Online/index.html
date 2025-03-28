@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+        <h1>Gerador de Senhas</h1>
+        </header>
+        <div class="senha-container">
+            <button id="gerar-senha" onclick="gerarSenha()">Gerar Senha</button>
+            <input type="text" name="senha" id="senha" readonly>
+        </div>
+        <div class="qcaracteres">
+            <h2>Quantidade de Caracteres</h2>
+            <button>+</button onclick="maisCaracteres()">
+            <button>-</button onclick="menosCaracteres()">
+        </div>
+        <div class="scaracteres">
+            <h2>Selecione os Caracteres</h2>
+            <label for="maiusculas">Maiusculas</label>
+            <input type="checkbox" name="maiusculas" id="maiusculas" onclick="maiusculas()">
+            <label for="minusculas">Minusculas</label>
+            <input type="checkbox" name="minusculas" id="minusculas" onclick="minusculas()">
+            <label for="numeros">Numeros</label>
+            <input type="checkbox" name="numeros" id="numeros" onclick="numeros()">
+            <label for="simbolos">Simbolos</label>
+            <input type="checkbox" name="simbolos" id="simbolos" onclick="simbolos()">
+        </div>
+    </div>
+    <footer>
+        <p>Desenvolvido por Jonas Daniel</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
