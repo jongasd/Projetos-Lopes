@@ -23,6 +23,9 @@ Domino as seguintes linguagens e tecnologias:
 </p>
 
 ---
+![Banner de tecnologia com vibe de jogos](https://github.com/JongasD/Projetos-Lopes/blob/main/banner.png)
+
+---
 
 ## 📂 Meus Projetos
 
