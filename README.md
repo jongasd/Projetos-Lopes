@@ -21,6 +21,7 @@ Domino as seguintes linguagens e tecnologias:
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"> 
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"> 
 </p>
+
 ---
 
 ## 📂 Meus Projetos
