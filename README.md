@@ -49,7 +49,7 @@ Aqui estão alguns dos meus repositórios em destaque:
 
 ## 🌟 Curiosidades Sobre Mim
 
-- Sou fã de games e filmes de ação, o que me inspira a trazer um pouco de criatividade visual para meus projetos! 🎌
+- Sou fã de jogos e filmes de ação, o que me inspira a trazer dinamismo e energia para meus projetos! 🎮
 - Adoro desafios de código e estou sempre participando de hackathons ou projetos colaborativos.
 - Meu emoji favorito é o cowboy: 🤠 (como você pode ver nos meus achievements!).
 
