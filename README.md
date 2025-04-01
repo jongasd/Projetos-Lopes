@@ -5,7 +5,7 @@
 Sou um **Front-end Developer** apaixonado por criar interfaces incríveis e funcionais. Com mais de **2 anos de experiência**, estou sempre aprendendo e explorando novas tecnologias para construir projetos que unem design e código. 🚀
 
 📍 **Localização**: São Paulo, Brasil  
-🌐 **LinkedIn**: [Jonas Daniel](https://www.linkedin.com/in/jonas-daniel-9904b63)  
+🌐 **Linkedin**: [Jonas Daniel](https://www.linkedin.com/in/jonas-daniel-9904b63)  
 ⏰ **Fuso horário**: UTC -03:00
 
 ---
