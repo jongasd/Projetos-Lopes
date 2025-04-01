@@ -51,11 +51,9 @@ Aqui estão alguns dos meus repositórios em destaque:
 
 ## 🌟 Curiosidades Sobre Mim
 
-- Sou fã de animes e mangás, o que me inspira a trazer um pouco de criatividade visual para meus projetos! 🎌
+- Sou fã de games e filmes de ação, o que me inspira a trazer um pouco de criatividade visual para meus projetos! 🎌
 - Adoro desafios de código e estou sempre participando de hackathons ou projetos colaborativos.
 - Meu emoji favorito é o cowboy: 🤠 (como você pode ver nos meus achievements!).
-
-![GIF de anime tech](https://media.giphy.com/media/l0Iyl55kTeh71nX1K/giphy.gif)
 
 ---
 
