@@ -1,6 +1,5 @@
 # 👋 Olá, eu sou Jonas (JongasD)!
 
-![Banner de tecnologia com vibe anime](https://i.ibb.co/5vW2kYQ/tech-anime-banner.gif)
 
 Sou um **Front-end Developer** apaixonado por criar interfaces incríveis e funcionais. Com mais de **2 anos de experiência**, estou sempre aprendendo e explorando novas tecnologias para construir projetos que unem design e código. 🚀
 
