@@ -19,5 +19,4 @@ def enviar_email(destinatario, assunto, corpo):
 
     print('Email enviado com sucesso para', destinatario)
 
-# Exemplo de uso
-enviar_email('iMh9B@example.com', 'Assunto do Email', 'Corpo do Email')
+enviar_email(destinatario, assunto, corpo)
