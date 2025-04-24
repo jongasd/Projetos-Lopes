@@ -2,7 +2,7 @@ import random
 
 def diceroll():
     print("Escolha qual tipo de dado deseja jogar:")
-    print("D3 - D4- D6- D10- D12- D20- D100- D1000 - Sair")
+    print("D3 - D4 - D6 - D8 - D10 - D12 - D20 - D100 - D1000 - Sair")
     choosed = input("")
     print("Digite a quantidade de vezes que deseja rodar o dado:")
     number = int(input(""))
@@ -18,6 +18,10 @@ def diceroll():
         for res in range(number):
             d6 = random.randint(1, 6)
             print("O número que caiu foi: ", d6)
+    elif choosed == "D8" or choosed == "d8":
+        for res in range(number):
+            d8 = random.randint(1, 8)
+            print("O número que caiu foi: ", d8)
     elif choosed == "D10" or choosed == "d10":
         for res in range(number):
             d10 = random.randint(1, 10)
