@@ -29,7 +29,7 @@ def organizar_arquivos():
                 shutil.move(caminho_arquivo, pasta_arquivos)
             elif extensao.lower() in [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".excel"]:
                 shutil.move(caminho_arquivo, pasta_documentos)
-            else:
+            else:   
                 shutil.move(caminho_arquivo, pasta_outros)
 
 print(f"O seus arquivos foram organizados, confira na pasta {pasta_organizar}, para ver as mudanças!")
