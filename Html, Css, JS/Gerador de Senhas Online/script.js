@@ -4,7 +4,7 @@ document.getElementById("gerar-senha").addEventListener("click", function() {
     document.getElementById("senha").value = senha;
 });
 
-function gerarSenha() {
+function gerarSenha() { 
     function maisCaracteres() {
         while (vezes < 16) {       
         vezes =+ 1;
