@@ -49,8 +49,8 @@ Here are some of my individual projects, organized in folders within my reposito
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JongasD&show_icons=true&theme=react-dark" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JongasD&layout=compact&theme=react-dark" alt="Top Languages"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=JongasD&show_icons=true&theme=radical" alt="GitHub Stats">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JongasD&layout=compact&theme=radical" alt="Top Languages">
 </p>
 
 ---
