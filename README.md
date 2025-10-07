@@ -1,10 +1,10 @@
 # 👋 Hi, I'm Jonas (JongasD)!
 
 > **Front-end Developer** passionate about building beautiful, functional, and user-centered interfaces.  
-> With over **2 years of experience**, I’m constantly learning, experimenting, and creating projects that blend design, usability, and clean code. 🚀
+> With over **4 years of experience**, I’m constantly learning, experimenting, and creating projects that blend design, usability, and clean code. 🚀
 
 📍 **Based in**: São Paulo, Brazil  
-🌐 **LinkedIn**: [Jonas Daniel](https://www.linkedin.com/in/jonas-daniel-9904b63)  
+🌐 **Linkedin**: [Jonas Daniel](https://www.linkedin.com/in/jonas-daniel-9904b63)  
 ⏰ **Timezone**: UTC -03:00  
 💬 **Open to collaborations and new opportunities!**
 
