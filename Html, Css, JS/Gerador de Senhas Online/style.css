@@ -1,12 +1,238 @@
-body{
-    font-family: sans-serif;
-    font-size: 10px;
-    background-color: rgb(0, 0, 0);
+:root {
+    /* Paleta de Cores: Tons de Roxo e Cinza */
+    --primary-color: #8b5cf6; /* Roxo vibrante */
+    --primary-hover: #7c3aed; /* Roxo mais escuro */
+    --bg-color: #111827;      /* Cinza muito escuro (Fundo) */
+    --card-bg: #1f2937;       /* Cinza escuro (Cartão) */
+    --text-main: #f3f4f6;     /* Branco gelo */
+    --text-muted: #9ca3af;    /* Cinza médio */
+    --border-color: #374151;  
+    
+    /* Indicadores de Força */
+    --strength-weak: #ef4444;
+    --strength-medium: #eab308;
+    --strength-strong: #22c55e;
+
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
 }
 
-.container{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Área de Display da Senha */
+.display-container {
+    background-color: var(--bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+    transition: border-color 0.3s;
+}
+
+.display-container:focus-within {
+    border-color: var(--primary-color);
+}
+
+#password-output {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-family: 'Courier New', monospace;
+    width: 85%;
+    outline: none;
+}
+
+#copy-btn {
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#copy-btn:hover {
+    color: #fff;
+}
+
+#copy-message {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    text-align: right;
+    display: block;
+    height: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#copy-message.active {
+    opacity: 1;
+}
+
+/* Controles */
+.control-group {
+    margin-bottom: 1.5rem;
+}
+
+.label-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+#length-value {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Slider Customizado */
+input[type=range] {
+    width: 100%;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+/* Checkboxes */
+.options-group h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+}
+
+.checkbox-wrapper input {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.checkbox-wrapper label {
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+/* Indicador de Força */
+.strength-section {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.strength-bar {
+    flex-grow: 1;
+    height: 8px;
+    background-color: var(--card-bg);
+    margin: 0 15px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#strength-indicator {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+#strength-text {
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Botão Principal */
+#generate-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#generate-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+#generate-btn:active {
+    transform: scale(0.98);
+}
+
+footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 1rem;
 }
