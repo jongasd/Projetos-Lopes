@@ -1,86 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerador de Senhas Seguro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main class="container">
-        <div class="card">
-            <header>
-                <h1>Gerador de Senhas</h1>
-                <p>Crie senhas fortes e seguras instantaneamente.</p>
-            </header>
+      <div class="card">
+        <header>
+          <h1>Gerador de Senhas</h1>
+          <p>Crie senhas fortes e seguras instantaneamente.</p>
+        </header>
 
-            <div class="display-container">
-                <input type="text" id="password-output" placeholder="Sua senha aqui" readonly>
-                <button id="copy-btn" title="Copiar Senha">
-                    <i class="ph ph-copy"></i>
-                </button>
-            </div>
-            <span id="copy-message">Copiado!</span>
-
-            <div class="controls">
-                
-                <div class="control-group length-group">
-                    <div class="label-header">
-                        <label for="length-slider">Quantidade de Caracteres</label>
-                        <span id="length-value">12</span>
-                    </div>
-                    <input type="range" id="length-slider" min="4" max="32" value="12">
-                </div>
-
-                <div class="control-group options-group">
-                    <h2>Configurações</h2>
-                    
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" id="uppercase" checked>
-                        <label for="uppercase">Letras Maiúsculas (A-Z)</label>
-                    </div>
-
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" id="lowercase" checked>
-                        <label for="lowercase">Letras Minúsculas (a-z)</label>
-                    </div>
-
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" id="numbers" checked>
-                        <label for="numbers">Números (0-9)</label>
-                    </div>
-
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" id="symbols">
-                        <label for="symbols">Símbolos (!@#$)</label>
-                    </div>
-                </div>
-
-                <div class="strength-section">
-                    <span>Força da senha:</span>
-                    <div class="strength-bar">
-                        <div id="strength-indicator"></div>
-                    </div>
-                    <span id="strength-text">Média</span>
-                </div>
-
-                <button id="generate-btn">
-                    Gerar Senha Agora
-                    <i class="ph ph-arrow-right"></i>
-                </button>
-            </div>
+        <div class="display-container">
+          <input
+            type="text"
+            id="password-output"
+            placeholder="Sua senha aqui"
+            readonly
+          />
+          <button id="copy-btn" title="Copiar Senha">
+            <i class="ph ph-copy"></i>
+          </button>
         </div>
+        <span id="copy-message">Copiado!</span>
 
-        <footer>
-            <p>Desenvolvido por Jonas Daniel</p>
-        </footer>
+        <div class="controls">
+          <div class="control-group length-group">
+            <div class="label-header">
+              <label for="length-slider">Quantidade de Caracteres</label>
+              <span id="length-value">12</span>
+            </div>
+            <input
+              type="range"
+              id="length-slider"
+              min="4"
+              max="32"
+              value="12"
+            />
+          </div>
+
+          <div class="control-group options-group">
+            <h2>Configurações</h2>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="uppercase" checked />
+              <label for="uppercase">Letras Maiúsculas (A-Z)</label>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="lowercase" checked />
+              <label for="lowercase">Letras Minúsculas (a-z)</label>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="numbers" checked />
+              <label for="numbers">Números (0-9)</label>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="symbols" />
+              <label for="symbols">Símbolos (!@#$)</label>
+            </div>
+          </div>
+
+          <div class="strength-section">
+            <span>Força da senha:</span>
+            <div class="strength-bar">
+              <div id="strength-indicator"></div>
+            </div>
+            <span id="strength-text">Média</span>
+          </div>
+
+          <button id="generate-btn">
+            Gerar Senha Agora
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <footer>
+        <p>Desenvolvido por Jonas Daniel</p>
+      </footer>
     </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
