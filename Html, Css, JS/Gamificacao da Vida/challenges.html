@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GameLife - Desafios</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div style="display: flex; align-items: center; gap: 15px">
+          <button id="menu-toggle-btn" class="btn-icon">
+            <span class="material-icons-round">menu</span>
+          </button>
+          <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
+        </div>
+
+        <button
+          id="open-tutorial-btn"
+          class="btn-icon"
+          style="background: rgba(255, 255, 255, 0.1)"
+        >
+          <span class="material-icons-round">help_outline</span>
+        </button>
+      </nav>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+    <aside class="sidebar-drawer" id="mySidebar">
+      <div class="sidebar-header">
+        <div class="user-profile-box">
+          <img src="https://via.placeholder.com/100" alt="User" />
+          <div class="user-details">
+            <h3 id="sidebar-name">Heroi</h3>
+            <span id="sidebar-level">Lvl 1</span>
+          </div>
+        </div>
+        <button id="close-sidebar-btn">
+          <span class="material-icons-round">close</span>
+        </button>
+      </div>
+      <hr class="sidebar-divider" />
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html"
+            ><span class="material-icons-round">home</span><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="quests.html"
+            ><span class="material-icons-round">task_alt</span
+            ><span>Missões</span></a
+          >
+        </li>
+        <li>
+          <a href="character.html"
+            ><span class="material-icons-round">person</span
+            ><span>Personagem</span></a
+          >
+        </li>
+        <li>
+          <a href="friends.html"
+            ><span class="material-icons-round">group</span
+            ><span>Amigos</span></a
+          >
+        </li>
+        <li>
+          <a href="ranking.html"
+            ><span class="material-icons-round">leaderboard</span
+            ><span>Ranking</span></a
+          >
+        </li>
+        <li>
+          <a href="challenges.html"
+            ><span class="material-icons-round">emoji_events</span
+            ><span>Desafios</span></a
+          >
+        </li>
+        <li>
+          <a href="achievements.html"
+            ><span class="material-icons-round">military_tech</span
+            ><span>Conquistas</span></a
+          >
+        </li>
+        <li>
+          <a href="guild.html"
+            ><span class="material-icons-round">shield</span
+            ><span>Guilda</span></a
+          >
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="settings.html" class="sidebar-link-footer"
+          ><span class="material-icons-round">settings</span> Config</a
+        >
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
+          ><span class="material-icons-round">logout</span> Sair</a
+        >
+      </div>
+    </aside>
+
+    <main>
+      <h1>Central de Desafios</h1>
+
+      <section style="margin-bottom: 3rem">
+        <h2 style="border-left: 5px solid var(--danger); padding-left: 10px">
+          🛡️ Chefões (Boss Battles)
+        </h2>
+        <p style="color: var(--text-muted); margin-bottom: 1rem">
+          Metas gigantescas divididas em fases.
+        </p>
+
+        <div class="card boss-card">
+          <div class="boss-header">
+            <div class="boss-title">
+              <span class="material-icons-round" style="font-size: 2rem"
+                >school</span
+              >
+              Projeto Final da Faculdade
+            </div>
+            <span class="tag-category" style="background: #fff; color: #000"
+              >Épico</span
+            >
+          </div>
+
+          <div class="boss-hp-container">
+            <div
+              class="boss-hp-fill"
+              id="boss-hp-bar"
+              style="width: 100%"
+            ></div>
+            <div class="boss-hp-text">
+              <span id="boss-hp-current">10000</span> / 10000 HP
+            </div>
+          </div>
+
+          <ul class="boss-stages" id="boss-stages-list">
+            <li>
+              <input type="checkbox" class="boss-checkbox" data-dmg="2000" />
+              <span>Fase 1: Pesquisa bibliográfica (-2000 HP)</span>
+            </li>
+            <li>
+              <input type="checkbox" class="boss-checkbox" data-dmg="2000" />
+              <span>Fase 2: Escrever introdução (-2000 HP)</span>
+            </li>
+            <li>
+              <input type="checkbox" class="boss-checkbox" data-dmg="3000" />
+              <span>Fase 3: Desenvolver capítulos (-3000 HP)</span>
+            </li>
+            <li>
+              <input type="checkbox" class="boss-checkbox" data-dmg="2000" />
+              <span>Fase 4: Conclusão (-2000 HP)</span>
+            </li>
+            <li>
+              <input type="checkbox" class="boss-checkbox" data-dmg="1000" />
+              <span>Fase 5: Revisão final (-1000 HP)</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 1.5rem; text-align: right">
+            <small style="color: #fff"
+              >Recompensa: <strong>+500 XP, Título "Graduado"</strong></small
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 style="border-left: 5px solid var(--primary); padding-left: 10px">
+          ⚔️ Desafios Sociais (PvP)
+        </h2>
+        <div class="quest-grid-list">
+          <div class="card quest-item-card">
+            <div>
+              <span class="tag-category cat-saude">Saúde</span>
+              <h4>Rei do Agachamento</h4>
+              <p class="quest-desc">Quem faz mais exercícios esta semana?</p>
+              <div style="display: flex; gap: -5px; margin-top: 10px">
+                <img
+                  src="https://via.placeholder.com/30"
+                  style="border-radius: 50%; border: 1px solid #fff"
+                />
+                <img
+                  src="https://via.placeholder.com/30"
+                  style="
+                    border-radius: 50%;
+                    border: 1px solid #fff;
+                    margin-left: -10px;
+                  "
+                />
+              </div>
+            </div>
+            <div class="quest-footer">
+              <button class="btn-primary" style="width: 100%">Entrar</button>
+            </div>
+          </div>
+
+          <div class="card quest-item-card">
+            <div>
+              <span class="tag-category cat-conhec">Estudos</span>
+              <h4>Maratona de Leitura</h4>
+              <p class="quest-desc">
+                Competição: Quem lê mais páginas até domingo.
+              </p>
+            </div>
+            <div class="quest-footer">
+              <button class="btn-primary" style="width: 100%">
+                Desafiar Amigo
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="tutorial-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close" id="close-tutorial">&times;</button>
+        <h2 style="color: var(--primary)">Como Funcionam os Desafios?</h2>
+
+        <div style="margin-bottom: 1rem">
+          <h3 style="font-size: 1.1rem; color: var(--danger)">
+            🐉 Desafio Chefe (Boss)
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted)">
+            Grandes objetivos são "Chefões". Marque as fases para tirar HP dele.
+            Quando chegar a 0, você vence!
+          </p>
+        </div>
+        <hr
+          style="
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 1rem 0;
+          "
+        />
+        <div>
+          <h3 style="font-size: 1.1rem; color: var(--success)">
+            ⚔️ Social (PvP)
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted)">
+            Crie competições com amigos para ver quem faz mais pontos.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container"><p>&copy; 2025 GameLife.</p></div>
+    </footer>
+
+    <script src="src/script/sidebar.js"></script>
+
+    <script src="src/script/challenges.js"></script>
+  </body>
+</html>

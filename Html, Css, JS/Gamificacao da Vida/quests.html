@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GameLife - Missões</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div style="display: flex; align-items: center; gap: 15px">
+          <button id="menu-toggle-btn" class="btn-icon">
+            <span class="material-icons-round">menu</span>
+          </button>
+          <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+    <aside class="sidebar-drawer" id="mySidebar">
+      <div class="sidebar-header">
+        <div class="user-profile-box">
+          <img src="https://via.placeholder.com/100" alt="User" />
+          <div class="user-details">
+            <h3 id="sidebar-name">Heroi</h3>
+            <span id="sidebar-level">Lvl 1</span>
+          </div>
+        </div>
+        <button id="close-sidebar-btn">
+          <span class="material-icons-round">close</span>
+        </button>
+      </div>
+      <hr class="sidebar-divider" />
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html"
+            ><span class="material-icons-round">home</span><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="quests.html"
+            ><span class="material-icons-round">task_alt</span
+            ><span>Missões</span></a
+          >
+        </li>
+        <li>
+          <a href="character.html"
+            ><span class="material-icons-round">person</span
+            ><span>Personagem</span></a
+          >
+        </li>
+        <li>
+          <a href="friends.html"
+            ><span class="material-icons-round">group</span
+            ><span>Amigos</span></a
+          >
+        </li>
+        <li>
+          <a href="ranking.html"
+            ><span class="material-icons-round">leaderboard</span
+            ><span>Ranking</span></a
+          >
+        </li>
+        <li>
+          <a href="challenges.html"
+            ><span class="material-icons-round">emoji_events</span
+            ><span>Desafios</span></a
+          >
+        </li>
+        <li>
+          <a href="achievements.html"
+            ><span class="material-icons-round">military_tech</span
+            ><span>Conquistas</span></a
+          >
+        </li>
+        <li>
+          <a href="guild.html"
+            ><span class="material-icons-round">shield</span
+            ><span>Guilda</span></a
+          >
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="settings.html" class="sidebar-link-footer"
+          ><span class="material-icons-round">settings</span> Config</a
+        >
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
+          ><span class="material-icons-round">logout</span> Sair</a
+        >
+      </div>
+    </aside>
+
+    <main>
+      <h1>Quadro de Missões</h1>
+
+      <!-- Seção de Criação de Missão Reformulada -->
+      <div class="quest-creator-card">
+        <div class="creator-header">
+          <div class="header-left">
+            <span class="material-icons-round creator-icon">add_task</span>
+            <div>
+              <h3>Nova Missão</h3>
+              <p class="creator-subtitle">
+                Crie desafios personalizados e ganhe XP
+              </p>
+            </div>
+          </div>
+          <div class="xp-preview">
+            <span class="material-icons-round">stars</span>
+            <span id="xp-display">10 XP</span>
+          </div>
+        </div>
+
+        <div class="creator-body">
+          <div class="input-group">
+            <label for="quest-title">
+              <span class="material-icons-round label-icon">edit_note</span>
+              Descrição da Missão
+            </label>
+            <input
+              type="text"
+              id="quest-title"
+              placeholder="Ex: Ler 30 páginas de um livro técnico..."
+              maxlength="120"
+            />
+            <span class="char-counter">0/120</span>
+          </div>
+
+          <div class="dual-inputs">
+            <div class="input-group">
+              <label for="quest-category">
+                <span class="material-icons-round label-icon">category</span>
+                Categoria
+              </label>
+              <select id="quest-category">
+                <option value="cat-geral">🎯 Geral</option>
+                <option value="cat-saude">💚 Saúde</option>
+                <option value="cat-carreira">💼 Carreira</option>
+                <option value="cat-financas">💰 Finanças</option>
+                <option value="cat-conhec">📚 Estudos</option>
+                <option value="cat-social">👥 Social</option>
+                <option value="cat-criat">🎨 Criatividade</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="quest-difficulty">
+                <span class="material-icons-round label-icon">bar_chart</span>
+                Dificuldade
+              </label>
+              <select id="quest-difficulty">
+                <option value="easy">⚡ Fácil (10 XP)</option>
+                <option value="medium">🔥 Médio (25 XP)</option>
+                <option value="hard">💎 Difícil (50 XP)</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="add-quest-btn" class="btn-create-quest">
+            <span class="material-icons-round">rocket_launch</span>
+            <span>Criar Missão</span>
+          </button>
+        </div>
+
+        <div class="creator-footer">
+          <div class="quick-tip">
+            <span class="material-icons-round tip-icon">lightbulb</span>
+            <p>
+              Dica: Missões específicas e mensuráveis são mais fáceis de
+              completar!
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2 style="margin-top: 2rem">Missões Ativas</h2>
+      <div class="quest-grid-list">
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-saude">Saúde</span>
+            <h4>Protocolo Hidratação</h4>
+            <p class="quest-desc">Beber 3 litros de água até o final do dia.</p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--success)">+20 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">check</i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-carreira">Carreira</span>
+            <h4>Modo Monge</h4>
+            <p class="quest-desc">
+              Trabalhar por 2 horas seguidas sem celular.
+            </p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--warning)">+100 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">check</i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <h2 style="margin-top: 2rem">Missões Disponíveis</h2>
+      <div class="quest-grid-list">
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-financas">Finanças</span>
+            <h4>Investidor Iniciante</h4>
+            <p class="quest-desc">
+              Separar R$ 50,00 para reserva de emergência ou investimento.
+            </p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--primary)">+50 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">add</i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-conhec">Conhecimento</span>
+            <h4>Vocabulário</h4>
+            <p class="quest-desc">
+              Ler 15 páginas de um livro técnico ou de não-ficção.
+            </p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--primary)">+40 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">add</i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-social">Social</span>
+            <h4>Networking Ativo</h4>
+            <p class="quest-desc">
+              Mandar mensagem para um contato profissional antigo.
+            </p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--success)">+25 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">add</i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-criat">Criatividade</span>
+            <h4>Brainstorm</h4>
+            <p class="quest-desc">
+              Escrever 10 ideias aleatórias sobre um projeto em papel em branco.
+            </p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--primary)">+40 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">add</i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-financas">Finanças</span>
+            <h4>Desafio Zero Gasto</h4>
+            <p class="quest-desc">
+              Passar o dia inteiro sem gastar 1 centavo (exceto contas fixas).
+            </p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--warning)">+80 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">add</i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-saude">Saúde</span>
+            <h4>Manutenção do Templo</h4>
+            <p class="quest-desc">
+              Treino físico intenso de 45 minutos (Musculação ou Cardio).
+            </p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--warning)">+100 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">add</i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-saude">Mental</span>
+            <h4>Detox Digital</h4>
+            <p class="quest-desc">
+              Ficar 1 hora antes de dormir sem nenhuma tela.
+            </p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--primary)">+60 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">add</i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <span class="tag-category cat-carreira">Carreira</span>
+            <h4>Setup Organizado</h4>
+            <p class="quest-desc">
+              Limpar a mesa e organizar arquivos da Área de Trabalho.
+            </p>
+          </div>
+          <div class="quest-footer">
+            <span style="color: var(--success)">+30 XP</span>
+            <button class="btn-icon">
+              <i class="material-icons-round">add</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container"><p>&copy; 2025 GameLife.</p></div>
+    </footer>
+    <script src="src/script/sidebar.js"></script>
+  </body>
+</html>

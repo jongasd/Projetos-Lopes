@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GameLife - Ranking</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div style="display: flex; align-items: center; gap: 15px">
+          <button id="menu-toggle-btn" class="btn-icon">
+            <span class="material-icons-round">menu</span>
+          </button>
+          <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+    <aside class="sidebar-drawer" id="mySidebar">
+      <div class="sidebar-header">
+        <div class="user-profile-box">
+          <img src="https://via.placeholder.com/100" alt="User" />
+          <div class="user-details">
+            <h3 id="sidebar-name">Heroi</h3>
+            <span id="sidebar-level">Lvl 1</span>
+          </div>
+        </div>
+        <button id="close-sidebar-btn">
+          <span class="material-icons-round">close</span>
+        </button>
+      </div>
+      <hr class="sidebar-divider" />
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html"
+            ><span class="material-icons-round">home</span><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="quests.html"
+            ><span class="material-icons-round">task_alt</span
+            ><span>Missões</span></a
+          >
+        </li>
+        <li>
+          <a href="character.html"
+            ><span class="material-icons-round">person</span
+            ><span>Personagem</span></a
+          >
+        </li>
+        <li>
+          <a href="friends.html"
+            ><span class="material-icons-round">group</span
+            ><span>Amigos</span></a
+          >
+        </li>
+        <li>
+          <a href="ranking.html"
+            ><span class="material-icons-round">leaderboard</span
+            ><span>Ranking</span></a
+          >
+        </li>
+        <li>
+          <a href="challenges.html"
+            ><span class="material-icons-round">emoji_events</span
+            ><span>Desafios</span></a
+          >
+        </li>
+        <li>
+          <a href="guild.html"
+            ><span class="material-icons-round">shield</span
+            ><span>Guilda</span></a
+          >
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="settings.html" class="sidebar-link-footer"
+          ><span class="material-icons-round">settings</span> Config</a
+        >
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
+          ><span class="material-icons-round">logout</span> Sair</a
+        >
+      </div>
+    </aside>
+
+    <main>
+      <h1>Ranking Global</h1>
+      <div class="podium-container">
+        <div class="podium-place second">
+          <img src="https://via.placeholder.com/150" alt="2nd" />
+          <div class="rank-badge silver">2</div>
+          <strong>Marcus</strong>
+        </div>
+        <div class="podium-place first">
+          <img src="https://via.placeholder.com/150" alt="1st" />
+          <div class="rank-badge gold">1</div>
+          <strong>Lucas</strong>
+        </div>
+        <div class="podium-place third">
+          <img src="https://via.placeholder.com/150" alt="3rd" />
+          <div class="rank-badge bronze">3</div>
+          <strong>Julia</strong>
+        </div>
+      </div>
+
+      <div class="ranking-list card">
+        <div class="ranking-row header">
+          <span>#</span><span>Usuário</span><span>XP</span>
+        </div>
+        <div class="ranking-row">
+          <span>4</span><span>Ana Clara</span><span>12,400</span>
+        </div>
+        <div class="ranking-row highlight-me">
+          <span>42</span><span>VOCÊ</span><span>850</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container"><p>&copy; 2025 GameLife.</p></div>
+    </footer>
+    <script src="src/script/sidebar.js"></script>
+  </body>
+</html>

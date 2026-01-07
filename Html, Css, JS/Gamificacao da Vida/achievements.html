@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GameLife - Conquistas</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div style="display: flex; align-items: center; gap: 15px">
+          <button id="menu-toggle-btn" class="btn-icon">
+            <span class="material-icons-round">menu</span>
+          </button>
+          <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+    <aside class="sidebar-drawer" id="mySidebar">
+      <div class="sidebar-header">
+        <div class="user-profile-box">
+          <img src="https://via.placeholder.com/100" alt="User" />
+          <div class="user-details">
+            <h3 id="sidebar-name">Heroi</h3>
+            <span id="sidebar-level">Lvl 1</span>
+          </div>
+        </div>
+        <button id="close-sidebar-btn">
+          <span class="material-icons-round">close</span>
+        </button>
+      </div>
+      <hr class="sidebar-divider" />
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html"
+            ><span class="material-icons-round">home</span><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="quests.html"
+            ><span class="material-icons-round">task_alt</span
+            ><span>Missões</span></a
+          >
+        </li>
+        <li>
+          <a href="character.html"
+            ><span class="material-icons-round">person</span
+            ><span>Personagem</span></a
+          >
+        </li>
+        <li>
+          <a href="friends.html"
+            ><span class="material-icons-round">group</span
+            ><span>Amigos</span></a
+          >
+        </li>
+        <li>
+          <a href="ranking.html"
+            ><span class="material-icons-round">leaderboard</span
+            ><span>Ranking</span></a
+          >
+        </li>
+        <li>
+          <a href="challenges.html"
+            ><span class="material-icons-round">emoji_events</span
+            ><span>Desafios</span></a
+          >
+        </li>
+        <li>
+          <a href="achievements.html"
+            ><span class="material-icons-round">military_tech</span
+            ><span>Conquistas</span></a
+          >
+        </li>
+        <li>
+          <a href="guild.html"
+            ><span class="material-icons-round">shield</span
+            ><span>Guilda</span></a
+          >
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="settings.html" class="sidebar-link-footer"
+          ><span class="material-icons-round">settings</span> Config</a
+        >
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
+          ><span class="material-icons-round">logout</span> Sair</a
+        >
+      </div>
+    </aside>
+
+    <main>
+      <h1>Galeria de Conquistas</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2rem">
+        Marcos lendários da sua jornada. Desbloqueie todos para se tornar um
+        mestre.
+      </p>
+
+      <div class="quest-grid-list">
+        <div class="card quest-item-card">
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #9ca3af; margin-bottom: 10px"
+              >alarm_on</i
+            >
+            <h4>O Despertar</h4>
+            <p class="quest-desc">Completar a primeira missão do aplicativo.</p>
+          </div>
+          <div><span class="rarity-badge rarity-comum">Comum</span></div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #9ca3af; margin-bottom: 10px"
+              >wb_sunny</i
+            >
+            <h4>Madrugador</h4>
+            <p class="quest-desc">
+              Completar uma missão antes das 07:00 da manhã.
+            </p>
+          </div>
+          <div><span class="rarity-badge rarity-comum">Comum</span></div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 10px"
+              >repeat</i
+            >
+            <h4>Lenda da Constância</h4>
+            <p class="quest-desc">
+              Manter um "Streak" de 7 dias completando ao menos 1 missão diária.
+            </p>
+          </div>
+          <div><span class="rarity-badge rarity-raro">Raro</span></div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 10px"
+              >handshake</i
+            >
+            <h4>O Diplomata</h4>
+            <p class="quest-desc">
+              Completar 5 missões sociais em uma única semana.
+            </p>
+          </div>
+          <div><span class="rarity-badge rarity-raro">Raro</span></div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 10px"
+              >speed</i
+            >
+            <h4>Slayer de Procrastinação</h4>
+            <p class="quest-desc">
+              Não deixar nenhuma missão pendente por 3 dias seguidos.
+            </p>
+          </div>
+          <div><span class="rarity-badge rarity-raro">Raro</span></div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #a855f7; margin-bottom: 10px"
+              >psychology</i
+            >
+            <h4>Mente de Titânio</h4>
+            <p class="quest-desc">
+              Atingir Nível 10 no atributo "Conhecimento".
+            </p>
+          </div>
+          <div><span class="rarity-badge rarity-epico">Épico</span></div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #a855f7; margin-bottom: 10px"
+              >local_fire_department</i
+            >
+            <h4>Berserker</h4>
+            <p class="quest-desc">
+              Completar 10 missões em um único dia (Dia super produtivo).
+            </p>
+          </div>
+          <div><span class="rarity-badge rarity-epico">Épico</span></div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #eab308; margin-bottom: 10px"
+              >trending_up</i
+            >
+            <h4>Lobo de Wall Street</h4>
+            <p class="quest-desc">
+              Completar 30 missões da categoria "Finanças".
+            </p>
+          </div>
+          <div><span class="rarity-badge rarity-lendario">Lendário</span></div>
+        </div>
+
+        <div class="card quest-item-card">
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #eab308; margin-bottom: 10px"
+              >auto_awesome</i
+            >
+            <h4>Polímata</h4>
+            <p class="quest-desc">
+              Ter todos os atributos (Saúde, Carreira, etc.) acima do nível 5.
+            </p>
+          </div>
+          <div><span class="rarity-badge rarity-lendario">Lendário</span></div>
+        </div>
+
+        <div
+          class="card quest-item-card"
+          style="
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.1);
+          "
+        >
+          <div>
+            <i
+              class="material-icons-round"
+              style="font-size: 2.5rem; color: #ef4444; margin-bottom: 10px"
+              >whatshot</i
+            >
+            <h4>Level 100 Boss</h4>
+            <p class="quest-desc">Atingir o nível 100 do personagem global.</p>
+          </div>
+          <div><span class="rarity-badge rarity-mitico">Mítico</span></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <p>&copy; 2025 GameLife.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/script/sidebar.js"></script>
+  </body>
+</html>

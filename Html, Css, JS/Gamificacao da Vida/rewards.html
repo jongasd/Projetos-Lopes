@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GameLife - Loja</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div style="display: flex; align-items: center; gap: 15px">
+          <button id="menu-toggle-btn" class="btn-icon">
+            <span class="material-icons-round">menu</span>
+          </button>
+          <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+    <aside class="sidebar-drawer" id="mySidebar">
+      <div class="sidebar-header">
+        <div class="user-profile-box">
+          <img src="https://via.placeholder.com/100" alt="User" />
+          <div class="user-details">
+            <h3 id="sidebar-name">Heroi</h3>
+            <span id="sidebar-level">Lvl 1</span>
+          </div>
+        </div>
+        <button id="close-sidebar-btn">
+          <span class="material-icons-round">close</span>
+        </button>
+      </div>
+      <hr class="sidebar-divider" />
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html"
+            ><span class="material-icons-round">home</span><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="quests.html"
+            ><span class="material-icons-round">task_alt</span
+            ><span>Missões</span></a
+          >
+        </li>
+        <li>
+          <a href="character.html"
+            ><span class="material-icons-round">person</span
+            ><span>Personagem</span></a
+          >
+        </li>
+        <li>
+          <a href="friends.html"
+            ><span class="material-icons-round">group</span
+            ><span>Amigos</span></a
+          >
+        </li>
+        <li>
+          <a href="ranking.html"
+            ><span class="material-icons-round">leaderboard</span
+            ><span>Ranking</span></a
+          >
+        </li>
+        <li>
+          <a href="challenges.html"
+            ><span class="material-icons-round">emoji_events</span
+            ><span>Conquistas</span></a
+          >
+        </li>
+        <li>
+          <a href="guild.html"
+            ><span class="material-icons-round">shield</span
+            ><span>Guilda</span></a
+          >
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="settings.html" class="sidebar-link-footer"
+          ><span class="material-icons-round">settings</span> Config</a
+        >
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
+          ><span class="material-icons-round">logout</span> Sair</a
+        >
+      </div>
+    </aside>
+
+    <main>
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <h1>Loja de Recompensas</h1>
+        <div
+          class="card"
+          style="
+            padding: 10px 20px;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid #fbbf24;
+            color: #fbbf24;
+          "
+        >
+          💰 Saldo: 0
+        </div>
+      </div>
+      <p>Troque seu esforço por prêmios reais.</p>
+
+      <div class="shop-grid">
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">🍫</div>
+            <h4>Sobremesa Extra</h4>
+            <p class="quest-desc">Comer um doce/chocolate depois do almoço.</p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              50 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">☕</div>
+            <h4>Café Gourmet</h4>
+            <p class="quest-desc">
+              Comprar aquele café caro na padaria/Starbucks.
+            </p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              100 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">🎮</div>
+            <h4>1 Hora de Gameplay</h4>
+            <p class="quest-desc">Jogar videogame ou PC focado em diversão.</p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              120 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">🍿</div>
+            <h4>Passe Livre Netflix</h4>
+            <p class="quest-desc">
+              Direito de assistir 2 episódios de série sem culpa.
+            </p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              150 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">😴</div>
+            <h4>Dormir até Tarde</h4>
+            <p class="quest-desc">
+              No próximo fim de semana, nada de despertador.
+            </p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              200 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">🌙</div>
+            <h4>Noite Off</h4>
+            <p class="quest-desc">
+              Uma noite sem estudar ou trabalhar, apenas relaxando.
+            </p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              350 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">🎟️</div>
+            <h4>Cinema VIP</h4>
+            <p class="quest-desc">Ir ao cinema ver um lançamento.</p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              400 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">🍕</div>
+            <h4>Vale iFood/Pizza</h4>
+            <p class="quest-desc">
+              Pedir comida no fim de semana (Jantar livre).
+            </p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              500 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">📚</div>
+            <h4>Compra de Livro</h4>
+            <p class="quest-desc">Comprar um livro novo físico ou Kindle.</p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              800 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+
+        <div class="card shop-item">
+          <div style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 10px">🖥️</div>
+            <h4>Upgrade no Setup</h4>
+            <p class="quest-desc">
+              Comprar um acessório pro PC (mousepad, cabo, led).
+            </p>
+          </div>
+          <div style="text-align: center">
+            <div
+              class="item-price"
+              style="
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: var(--warning);
+              "
+            >
+              1000 Gold
+            </div>
+            <button class="btn-primary" style="width: 100%">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container"><p>&copy; 2025 GameLife.</p></div>
+    </footer>
+    <script src="src/script/sidebar.js"></script>
+  </body>
+</html>

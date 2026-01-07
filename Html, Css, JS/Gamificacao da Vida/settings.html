@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GameLife - Configurações</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div style="display: flex; align-items: center; gap: 15px">
+          <button id="menu-toggle-btn" class="btn-icon">
+            <span class="material-icons-round">menu</span>
+          </button>
+          <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+    <aside class="sidebar-drawer" id="mySidebar">
+      <div class="sidebar-header">
+        <div class="user-profile-box">
+          <img src="https://via.placeholder.com/100" alt="User" />
+          <div class="user-details">
+            <h3 id="sidebar-name">Heroi</h3>
+            <span id="sidebar-level">Lvl 1</span>
+          </div>
+        </div>
+        <button id="close-sidebar-btn">
+          <span class="material-icons-round">close</span>
+        </button>
+      </div>
+      <hr class="sidebar-divider" />
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html"
+            ><span class="material-icons-round">home</span><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="quests.html"
+            ><span class="material-icons-round">task_alt</span
+            ><span>Missões</span></a
+          >
+        </li>
+        <li>
+          <a href="character.html"
+            ><span class="material-icons-round">person</span
+            ><span>Personagem</span></a
+          >
+        </li>
+        <li>
+          <a href="friends.html"
+            ><span class="material-icons-round">group</span
+            ><span>Amigos</span></a
+          >
+        </li>
+        <li>
+          <a href="ranking.html"
+            ><span class="material-icons-round">leaderboard</span
+            ><span>Ranking</span></a
+          >
+        </li>
+        <li>
+          <a href="challenges.html"
+            ><span class="material-icons-round">emoji_events</span
+            ><span>Desafios</span></a
+          >
+        </li>
+        <li>
+          <a href="guild.html"
+            ><span class="material-icons-round">shield</span
+            ><span>Guilda</span></a
+          >
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="settings.html" class="sidebar-link-footer"
+          ><span class="material-icons-round">settings</span> Config</a
+        >
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
+          ><span class="material-icons-round">logout</span> Sair</a
+        >
+      </div>
+    </aside>
+
+    <main>
+      <h1>Configurações</h1>
+      <div class="card">
+        <h3>Editar Perfil</h3>
+        <div class="settings-form">
+          <label>Nome do Herói</label>
+          <input
+            type="text"
+            id="setting-name"
+            placeholder="Digite seu nome..."
+          />
+          <button class="btn-primary" onclick="saveSettings()">Salvar</button>
+        </div>
+      </div>
+      <div class="card" style="border-color: var(--danger)">
+        <h3 style="color: var(--danger)">Zona de Perigo</h3>
+        <button
+          class="btn-primary"
+          style="background: var(--danger)"
+          onclick="resetGame()"
+        >
+          Resetar Progresso
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container"><p>&copy; 2025 GameLife.</p></div>
+    </footer>
+    <script src="src/script/sidebar.js"></script>
+    <script>
+      document.getElementById("setting-name").value =
+        localStorage.getItem("userName") || "";
+      function saveSettings() {
+        localStorage.setItem(
+          "userName",
+          document.getElementById("setting-name").value
+        );
+        location.reload();
+      }
+      function resetGame() {
+        if (confirm("Apagar tudo?")) {
+          localStorage.clear();
+          window.location.href = "index.html";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GameLife - Personagem</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div style="display: flex; align-items: center; gap: 15px">
+          <button id="menu-toggle-btn" class="btn-icon">
+            <span class="material-icons-round">menu</span>
+          </button>
+          <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+    <aside class="sidebar-drawer" id="mySidebar">
+      <div class="sidebar-header">
+        <div class="user-profile-box">
+          <img src="https://via.placeholder.com/100" alt="User" />
+          <div class="user-details">
+            <h3 id="sidebar-name">Heroi</h3>
+            <span id="sidebar-level">Lvl 1</span>
+          </div>
+        </div>
+        <button id="close-sidebar-btn">
+          <span class="material-icons-round">close</span>
+        </button>
+      </div>
+      <hr class="sidebar-divider" />
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html"
+            ><span class="material-icons-round">home</span><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="quests.html"
+            ><span class="material-icons-round">task_alt</span
+            ><span>Missões</span></a
+          >
+        </li>
+        <li>
+          <a href="character.html"
+            ><span class="material-icons-round">person</span
+            ><span>Personagem</span></a
+          >
+        </li>
+        <li>
+          <a href="friends.html"
+            ><span class="material-icons-round">group</span
+            ><span>Amigos</span></a
+          >
+        </li>
+        <li>
+          <a href="ranking.html"
+            ><span class="material-icons-round">leaderboard</span
+            ><span>Ranking</span></a
+          >
+        </li>
+        <li>
+          <a href="challenges.html"
+            ><span class="material-icons-round">emoji_events</span
+            ><span>Desafios</span></a
+          >
+        </li>
+        <li>
+          <a href="achievements.html"
+            ><span class="material-icons-round">military_tech</span
+            ><span>Conquistas</span></a
+          >
+        </li>
+        <li>
+          <a href="guild.html"
+            ><span class="material-icons-round">shield</span
+            ><span>Guilda</span></a
+          >
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="settings.html" class="sidebar-link-footer"
+          ><span class="material-icons-round">settings</span> Config</a
+        >
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
+          ><span class="material-icons-round">logout</span> Sair</a
+        >
+      </div>
+    </aside>
+
+    <main>
+      <div class="character-screen">
+        <div style="text-align: center; margin-bottom: 2rem">
+          <div
+            class="avatar-frame"
+            style="
+              width: 150px;
+              height: 150px;
+              margin: 0 auto;
+              border-radius: 50%;
+              overflow: hidden;
+              border: 4px solid var(--primary);
+              box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+            "
+          >
+            <img
+              src="https://via.placeholder.com/150"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <h2 style="margin-top: 1rem">O Iniciante</h2>
+          <div
+            style="
+              background: #3f3f46;
+              height: 10px;
+              width: 300px;
+              margin: 10px auto;
+              border-radius: 5px;
+              overflow: hidden;
+            "
+          >
+            <div
+              style="background: var(--primary); width: 50%; height: 100%"
+            ></div>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem">
+            XP: 500 / 1000
+          </p>
+        </div>
+
+        <div class="stats-grid-container">
+          <div class="stat-card">
+            <h3>💪 Força</h3>
+            <div class="stat-value">Lvl 2</div>
+            <p style="font-size: 0.8rem; color: #666">Físico</p>
+          </div>
+          <div class="stat-card">
+            <h3>🧠 Inteligência</h3>
+            <div class="stat-value">Lvl 5</div>
+            <p style="font-size: 0.8rem; color: #666">Estudo</p>
+          </div>
+          <div class="stat-card">
+            <h3>🗣️ Carisma</h3>
+            <div class="stat-value">Lvl 3</div>
+            <p style="font-size: 0.8rem; color: #666">Social</p>
+          </div>
+          <div class="stat-card">
+            <h3>🎨 Criatividade</h3>
+            <div class="stat-value">Lvl 1</div>
+            <p style="font-size: 0.8rem; color: #666">Arte/Projetos</p>
+          </div>
+          <div class="stat-card">
+            <h3>🛡️ Disciplina</h3>
+            <div class="stat-value">Lvl 4</div>
+            <p style="font-size: 0.8rem; color: #666">Constância</p>
+          </div>
+          <div class="stat-card">
+            <h3>🦉 Sabedoria</h3>
+            <div class="stat-value">Lvl 2</div>
+            <p style="font-size: 0.8rem; color: #666">Mente</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container"><p>&copy; 2025 GameLife.</p></div>
+    </footer>
+    <script src="src/script/sidebar.js"></script>
+  </body>
+</html>
