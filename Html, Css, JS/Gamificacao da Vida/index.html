@@ -1,114 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>GameLife - Home</title>
-    <link rel="stylesheet" href="src/styles/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <button id="menu-toggle-btn" class="btn-icon">
-                    <span class="material-icons-round">menu</span>
-                </button>
-                <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
-            </div>
-        </nav>
+      <nav>
+        <div style="display: flex; align-items: center; gap: 15px">
+          <button id="menu-toggle-btn" class="btn-icon">
+            <span class="material-icons-round">menu</span>
+          </button>
+          <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
+        </div>
+      </nav>
     </header>
 
     <div id="sidebar-overlay"></div>
     <aside class="sidebar-drawer" id="mySidebar">
-        <div class="sidebar-header">
-            <div class="user-profile-box">
-                <img src="https://via.placeholder.com/100" id="sidebar-avatar" alt="User">
-                <div class="user-details">
-                    <h3 id="sidebar-name">Heroi</h3>
-                    <span id="sidebar-level">Lvl 1</span>
-                </div>
-            </div>
-            <button id="close-sidebar-btn"><span class="material-icons-round">close</span></button>
+      <div class="sidebar-header">
+        <div class="user-profile-box">
+          <img
+            src="https://via.placeholder.com/100"
+            id="sidebar-avatar"
+            alt="User"
+          />
+          <div class="user-details">
+            <h3 id="sidebar-name">Heroi</h3>
+            <span id="sidebar-level">Lvl 1</span>
+          </div>
         </div>
-        <hr class="sidebar-divider">
-        <ul class="sidebar-menu">
-            <li><a href="index.html"><span class="material-icons-round">home</span><span>Home</span></a></li>
-            <li><a href="quests.html"><span class="material-icons-round">task_alt</span><span>Missões</span></a></li>
-            <li><a href="character.html"><span class="material-icons-round">person</span><span>Personagem</span></a></li>
-            <li><a href="friends.html"><span class="material-icons-round">group</span><span>Amigos</span></a></li>
-            <li><a href="ranking.html"><span class="material-icons-round">leaderboard</span><span>Ranking</span></a></li>
-            <li><a href="challenges.html"><span class="material-icons-round">emoji_events</span><span>Desafios</span></a></li>
-            <li><a href="guild.html"><span class="material-icons-round">shield</span><span>Guilda</span></a></li>
-        </ul>
-        <div class="sidebar-footer">
-            <a href="settings.html" class="sidebar-link-footer"><span class="material-icons-round">settings</span> Configurações</a>
-            <a href="#" id="logout-btn" class="sidebar-link-footer danger"><span class="material-icons-round">logout</span> Sair</a>
-        </div>
+        <button id="close-sidebar-btn">
+          <span class="material-icons-round">close</span>
+        </button>
+      </div>
+      <hr class="sidebar-divider" />
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html"
+            ><span class="material-icons-round">home</span><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="quests.html"
+            ><span class="material-icons-round">task_alt</span
+            ><span>Missões</span></a
+          >
+        </li>
+        <li>
+          <a href="character.html"
+            ><span class="material-icons-round">person</span
+            ><span>Personagem</span></a
+          >
+        </li>
+        <li>
+          <a href="friends.html"
+            ><span class="material-icons-round">group</span
+            ><span>Amigos</span></a
+          >
+        </li>
+        <li>
+          <a href="ranking.html"
+            ><span class="material-icons-round">leaderboard</span
+            ><span>Ranking</span></a
+          >
+        </li>
+        <li>
+          <a href="challenges.html"
+            ><span class="material-icons-round">emoji_events</span
+            ><span>Desafios</span></a
+          >
+        </li>
+        <li>
+          <a href="guild.html"
+            ><span class="material-icons-round">shield</span
+            ><span>Guilda</span></a
+          >
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="settings.html" class="sidebar-link-footer"
+          ><span class="material-icons-round">settings</span> Configurações</a
+        >
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
+          ><span class="material-icons-round">logout</span> Sair</a
+        >
+      </div>
     </aside>
 
     <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1 class="slide-in">Olá, <span id="home-player-name" style="color: var(--primary);">Heroi</span>! 👋</h1>
-                <p class="fade-in">Sua jornada continua. O que vamos conquistar hoje?</p>
-                
-                <div class="quick-stats-row fade-in">
-                    <div class="stat-badge"><span class="material-icons-round" style="color: var(--warning)">bolt</span><span id="home-level">Nível 1</span></div>
-                    <div class="stat-badge"><span class="material-icons-round" style="color: var(--success)">savings</span><span id="home-coins">0 Moedas</span></div>
-                </div>
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="slide-in">
+            Olá,
+            <span id="home-player-name" style="color: var(--primary)"
+              >Heroi</span
+            >! 👋
+          </h1>
+          <p class="fade-in">
+            Sua jornada continua. O que vamos conquistar hoje?
+          </p>
 
-                <div class="hero-buttons fade-in">
-                    <a href="quests.html" class="btn-hero primary">⚔️ Ver Missões</a>
-                    <a href="rewards.html" class="btn-hero secondary">🎁 Ir para Loja</a>
-                </div>
+          <div class="quick-stats-row fade-in">
+            <div class="stat-badge">
+              <span class="material-icons-round" style="color: var(--warning)"
+                >bolt</span
+              ><span id="home-level">Nível 1</span>
             </div>
-            <div class="hero-visual">
-                <div class="visual-circle"><span style="font-size: 5rem;">🚀</span></div>
+            <div class="stat-badge">
+              <span class="material-icons-round" style="color: var(--success)"
+                >savings</span
+              ><span id="home-coins">0 Moedas</span>
             </div>
-        </section>
+          </div>
 
-        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 3rem 0;">
+          <div class="hero-buttons fade-in">
+            <a href="quests.html" class="btn-hero primary">⚔️ Ver Missões</a>
+            <a href="rewards.html" class="btn-hero secondary"
+              >🎁 Ir para Loja</a
+            >
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-circle">
+            <span style="font-size: 5rem">🚀</span>
+          </div>
+        </div>
+      </section>
 
-        <section>
-            <h2 style="text-align: center; border: none; margin-bottom: 2rem;">Como Funciona?</h2>
-            <div class="tutorial-grid">
-                <div class="tutorial-card">
-                    <div class="step-number">1</div>
-                    <div class="icon-box">📝</div>
-                    <h3>Crie Missões</h3>
-                    <p>Defina tarefas reais da sua vida (estudar, treinar).</p>
-                </div>
-                <div class="tutorial-card">
-                    <div class="step-number">2</div>
-                    <div class="icon-box">⚡</div>
-                    <h3>Ganhe XP</h3>
-                    <p>Conclua tarefas para subir de nível e ganhar moedas.</p>
-                </div>
-                <div class="tutorial-card">
-                    <div class="step-number">3</div>
-                    <div class="icon-box">💎</div>
-                    <h3>Evolua</h3>
-                    <p>Resgate prêmios e melhore seu personagem.</p>
-                </div>
-            </div>
-        </section>
+      <hr
+        style="
+          border: 0;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          margin: 3rem 0;
+        "
+      />
+
+      <section>
+        <h2 style="text-align: center; border: none; margin-bottom: 2rem">
+          Como Funciona?
+        </h2>
+        <div class="tutorial-grid">
+          <div class="tutorial-card">
+            <div class="step-number">1</div>
+            <div class="icon-box">📝</div>
+            <h3>Crie Missões</h3>
+            <p>Defina tarefas reais da sua vida (estudar, treinar).</p>
+          </div>
+          <div class="tutorial-card">
+            <div class="step-number">2</div>
+            <div class="icon-box">⚡</div>
+            <h3>Ganhe XP</h3>
+            <p>Conclua tarefas para subir de nível e ganhar moedas.</p>
+          </div>
+          <div class="tutorial-card">
+            <div class="step-number">3</div>
+            <div class="icon-box">💎</div>
+            <h3>Evolua</h3>
+            <p>Resgate prêmios e melhore seu personagem.</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <a href="index.html" class="footer-logo">GAME<span>LIFE</span></a>
-                <p>Gamifique sua vida.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Links</h4>
-                <ul><li><a href="index.html">Home</a></li><li><a href="quests.html">Missões</a></li></ul>
-            </div>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">GAME<span>LIFE</span></a>
+          <p>Gamifique sua vida.</p>
         </div>
-        <div class="footer-bottom"><p>&copy; 2025 GameLife.</p></div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quests.html">Missões</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 GameLife.</p></div>
     </footer>
 
     <script src="src/script/sidebar.js"></script>
     <script src="src/script/dashboard.js"></script>
-</body>
+  </body>
 </html>
