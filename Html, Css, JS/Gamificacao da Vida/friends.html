@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameLife - Amigos</title>
     <link rel="stylesheet" href="src/styles/style.css" />
     <link
@@ -12,8 +13,9 @@
   <body>
     <header>
       <nav>
-        <div style="display: flex; align-items: center; gap: 15px">
-          <button id="menu-toggle-btn" class="btn-icon">
+        <div class="nav-left">
+          <!-- Estilo movido para CSS: display: flex; align-items: center; gap: 15px; -->
+          <button id="menu-toggle-btn" class="btn-icon" aria-label="Abrir menu">
             <span class="material-icons-round">menu</span>
           </button>
           <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
@@ -25,99 +27,120 @@
     <aside class="sidebar-drawer" id="mySidebar">
       <div class="sidebar-header">
         <div class="user-profile-box">
-          <img src="https://via.placeholder.com/100" alt="User" />
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Avatar do usuário"
+            loading="lazy"
+          />
           <div class="user-details">
             <h3 id="sidebar-name">Heroi</h3>
             <span id="sidebar-level">Lvl 1</span>
+            <div class="xp-bar-mini">
+              <!-- Adicionado para consistência com outros arquivos -->
+              <div class="xp-fill-mini" style="width: 0%"></div>
+            </div>
           </div>
         </div>
-        <button id="close-sidebar-btn">
+        <button id="close-sidebar-btn" aria-label="Fechar sidebar">
           <span class="material-icons-round">close</span>
         </button>
       </div>
       <hr class="sidebar-divider" />
       <ul class="sidebar-menu">
         <li>
-          <a href="index.html"
-            ><span class="material-icons-round">home</span><span>Home</span></a
-          >
+          <a href="index.html">
+            <span class="material-icons-round">home</span>
+            <span>Home</span>
+          </a>
         </li>
         <li>
-          <a href="quests.html"
-            ><span class="material-icons-round">task_alt</span
-            ><span>Missões</span></a
-          >
+          <a href="quests.html">
+            <span class="material-icons-round">task_alt</span>
+            <span>Missões</span>
+          </a>
         </li>
         <li>
-          <a href="character.html"
-            ><span class="material-icons-round">person</span
-            ><span>Personagem</span></a
-          >
+          <a href="character.html">
+            <span class="material-icons-round">person</span>
+            <span>Personagem</span>
+          </a>
+        </li>
+        <li class="active">
+          <!-- Marcado como active para página atual -->
+          <a href="friends.html">
+            <span class="material-icons-round">group</span>
+            <span>Amigos</span>
+          </a>
         </li>
         <li>
-          <a href="friends.html"
-            ><span class="material-icons-round">group</span
-            ><span>Amigos</span></a
-          >
+          <a href="ranking.html">
+            <span class="material-icons-round">leaderboard</span>
+            <span>Ranking</span>
+          </a>
         </li>
         <li>
-          <a href="ranking.html"
-            ><span class="material-icons-round">leaderboard</span
-            ><span>Ranking</span></a
-          >
+          <a href="challenges.html">
+            <span class="material-icons-round">emoji_events</span>
+            <span>Desafios</span>
+          </a>
         </li>
         <li>
-          <a href="challenges.html"
-            ><span class="material-icons-round">emoji_events</span
-            ><span>Desafios</span></a
-          >
-        </li>
-        <li>
-          <a href="guild.html"
-            ><span class="material-icons-round">shield</span
-            ><span>Guilda</span></a
-          >
+          <a href="guild.html">
+            <span class="material-icons-round">shield</span>
+            <span>Guilda</span>
+          </a>
         </li>
       </ul>
       <div class="sidebar-footer">
-        <a href="settings.html" class="sidebar-link-footer"
-          ><span class="material-icons-round">settings</span> Config</a
-        >
-        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
-          ><span class="material-icons-round">logout</span> Sair</a
-        >
+        <a href="settings.html" class="sidebar-link-footer">
+          <span class="material-icons-round">settings</span> Configurações
+          <!-- Corrigido de "Config" -->
+        </a>
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger">
+          <span class="material-icons-round">logout</span> Sair
+        </a>
       </div>
     </aside>
 
     <main>
       <h1>Amigos</h1>
-      <div class="card" style="display: flex; gap: 10px; align-items: center">
-        <i class="material-icons-round" style="color: var(--text-muted)"
-          >search</i
+      <div class="card search-bar">
+        <!-- Estilo movido para CSS: display: flex; gap: 10px; align-items: center; -->
+        <span class="material-icons-round search-icon" aria-hidden="true"
+          >search</span
         >
+        <!-- Estilo movido para CSS: color: var(--text-muted); -->
         <input
           type="text"
+          id="search-input"
           placeholder="Buscar amigo..."
-          style="margin: 0; border: none; background: transparent"
+          class="search-input"
         />
+        <!-- Estilo movido para CSS: margin: 0; border: none; background: transparent; Adicionado id para label -->
         <button class="btn-primary">Adicionar</button>
       </div>
 
-      <div class="friends-grid">
+      <div class="friends-grid" role="list">
+        <!-- Adicionado role para acessibilidade em grids -->
         <div class="friend-card card">
           <div class="friend-header">
             <img
               src="https://via.placeholder.com/150"
-              alt="Avatar"
+              alt="Avatar de Marcus Dev"
+              loading="lazy"
               class="friend-avatar"
             />
-            <span class="status-dot online"></span>
+            <span
+              class="status-dot online"
+              aria-label="Online"
+              title="Online"
+            ></span>
           </div>
           <h3>Marcus Dev</h3>
           <span class="friend-level">Nível 12</span>
           <div class="friend-actions">
-            <button class="btn-icon">
-              <i class="material-icons-round">chat</i>
+            <button class="btn-icon" aria-label="Iniciar chat">
+              <span class="material-icons-round">chat</span>
             </button>
           </div>
         </div>
@@ -125,16 +148,21 @@
           <div class="friend-header">
             <img
               src="https://via.placeholder.com/150"
-              alt="Avatar"
+              alt="Avatar de Ana Fit"
+              loading="lazy"
               class="friend-avatar"
             />
-            <span class="status-dot offline"></span>
+            <span
+              class="status-dot offline"
+              aria-label="Offline"
+              title="Offline"
+            ></span>
           </div>
           <h3>Ana Fit</h3>
           <span class="friend-level">Nível 8</span>
           <div class="friend-actions">
-            <button class="btn-icon">
-              <i class="material-icons-round">chat</i>
+            <button class="btn-icon" aria-label="Iniciar chat">
+              <span class="material-icons-round">chat</span>
             </button>
           </div>
         </div>
@@ -142,8 +170,11 @@
     </main>
 
     <footer>
-      <div class="footer-container"><p>&copy; 2025 GameLife.</p></div>
+      <div class="footer-container">
+        <p>&copy; 2025 GameLife.</p>
+      </div>
     </footer>
+
     <script src="src/script/sidebar.js"></script>
   </body>
 </html>

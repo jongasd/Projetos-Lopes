@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameLife - Conquistas</title>
     <link rel="stylesheet" href="src/styles/style.css" />
     <link
@@ -12,8 +13,9 @@
   <body>
     <header>
       <nav>
-        <div style="display: flex; align-items: center; gap: 15px">
-          <button id="menu-toggle-btn" class="btn-icon">
+        <div class="nav-left">
+          <!-- Estilo movido para CSS: display: flex; align-items: center; gap: 15px; -->
+          <button id="menu-toggle-btn" class="btn-icon" aria-label="Abrir menu">
             <span class="material-icons-round">menu</span>
           </button>
           <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
@@ -25,232 +27,248 @@
     <aside class="sidebar-drawer" id="mySidebar">
       <div class="sidebar-header">
         <div class="user-profile-box">
-          <img src="https://via.placeholder.com/100" alt="User" />
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Avatar do usuário"
+            loading="lazy"
+          />
           <div class="user-details">
             <h3 id="sidebar-name">Heroi</h3>
             <span id="sidebar-level">Lvl 1</span>
+            <!-- Adicionado xp-bar-mini para consistência com index.html; remova se não necessário -->
+            <div class="xp-bar-mini">
+              <div class="xp-fill-mini" style="width: 0%"></div>
+              <!-- Inline mantido se dinâmico via JS -->
+            </div>
           </div>
         </div>
-        <button id="close-sidebar-btn">
+        <button id="close-sidebar-btn" aria-label="Fechar sidebar">
           <span class="material-icons-round">close</span>
         </button>
       </div>
       <hr class="sidebar-divider" />
       <ul class="sidebar-menu">
         <li>
-          <a href="index.html"
-            ><span class="material-icons-round">home</span><span>Home</span></a
-          >
+          <a href="index.html">
+            <span class="material-icons-round">home</span>
+            <span>Home</span>
+          </a>
         </li>
         <li>
-          <a href="quests.html"
-            ><span class="material-icons-round">task_alt</span
-            ><span>Missões</span></a
-          >
+          <a href="quests.html">
+            <span class="material-icons-round">task_alt</span>
+            <span>Missões</span>
+          </a>
         </li>
         <li>
-          <a href="character.html"
-            ><span class="material-icons-round">person</span
-            ><span>Personagem</span></a
-          >
+          <a href="character.html">
+            <span class="material-icons-round">person</span>
+            <span>Personagem</span>
+          </a>
         </li>
         <li>
-          <a href="friends.html"
-            ><span class="material-icons-round">group</span
-            ><span>Amigos</span></a
-          >
+          <a href="friends.html">
+            <span class="material-icons-round">group</span>
+            <span>Amigos</span>
+          </a>
         </li>
         <li>
-          <a href="ranking.html"
-            ><span class="material-icons-round">leaderboard</span
-            ><span>Ranking</span></a
-          >
+          <a href="ranking.html">
+            <span class="material-icons-round">leaderboard</span>
+            <span>Ranking</span>
+          </a>
         </li>
         <li>
-          <a href="challenges.html"
-            ><span class="material-icons-round">emoji_events</span
-            ><span>Desafios</span></a
-          >
+          <a href="challenges.html">
+            <span class="material-icons-round">emoji_events</span>
+            <span>Desafios</span>
+          </a>
+        </li>
+        <li class="active">
+          <!-- Adicionado 'active' assumindo página atual -->
+          <a href="achievements.html">
+            <span class="material-icons-round">military_tech</span>
+            <span>Conquistas</span>
+          </a>
         </li>
         <li>
-          <a href="achievements.html"
-            ><span class="material-icons-round">military_tech</span
-            ><span>Conquistas</span></a
-          >
-        </li>
-        <li>
-          <a href="guild.html"
-            ><span class="material-icons-round">shield</span
-            ><span>Guilda</span></a
-          >
+          <a href="guild.html">
+            <span class="material-icons-round">shield</span>
+            <span>Guilda</span>
+          </a>
         </li>
       </ul>
       <div class="sidebar-footer">
-        <a href="settings.html" class="sidebar-link-footer"
-          ><span class="material-icons-round">settings</span> Config</a
-        >
-        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
-          ><span class="material-icons-round">logout</span> Sair</a
-        >
+        <a href="settings.html" class="sidebar-link-footer">
+          <span class="material-icons-round">settings</span> Configurações
+          <!-- Corrigido de "Config" para consistência -->
+        </a>
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger">
+          <span class="material-icons-round">logout</span> Sair
+        </a>
       </div>
     </aside>
 
     <main>
       <h1>Galeria de Conquistas</h1>
-      <p style="color: var(--text-muted); margin-bottom: 2rem">
+      <p class="text-muted">
+        <!-- Estilo movido para classe CSS: color: var(--text-muted); margin-bottom: 2rem; -->
         Marcos lendários da sua jornada. Desbloqueie todos para se tornar um
         mestre.
       </p>
 
-      <div class="quest-grid-list">
-        <div class="card quest-item-card">
+      <div class="achievement-grid">
+        <!-- Renomeado de quest-grid-list para semântica -->
+        <div class="card achievement-card">
+          <!-- Renomeado de quest-item-card -->
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #9ca3af; margin-bottom: 10px"
-              >alarm_on</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >alarm_on</span
             >
+            <!-- Estilos movidos para CSS: font-size, color, margin -->
             <h4>O Despertar</h4>
-            <p class="quest-desc">Completar a primeira missão do aplicativo.</p>
+            <p class="achievement-desc">
+              Completar a primeira missão do aplicativo.
+            </p>
+            <!-- Renomeado class para semântica -->
           </div>
           <div><span class="rarity-badge rarity-comum">Comum</span></div>
         </div>
 
-        <div class="card quest-item-card">
+        <div class="card achievement-card">
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #9ca3af; margin-bottom: 10px"
-              >wb_sunny</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >wb_sunny</span
             >
             <h4>Madrugador</h4>
-            <p class="quest-desc">
+            <p class="achievement-desc">
               Completar uma missão antes das 07:00 da manhã.
             </p>
           </div>
           <div><span class="rarity-badge rarity-comum">Comum</span></div>
         </div>
 
-        <div class="card quest-item-card">
+        <div class="card achievement-card">
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 10px"
-              >repeat</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >repeat</span
             >
             <h4>Lenda da Constância</h4>
-            <p class="quest-desc">
+            <p class="achievement-desc">
               Manter um "Streak" de 7 dias completando ao menos 1 missão diária.
             </p>
           </div>
           <div><span class="rarity-badge rarity-raro">Raro</span></div>
         </div>
 
-        <div class="card quest-item-card">
+        <div class="card achievement-card">
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 10px"
-              >handshake</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >handshake</span
             >
             <h4>O Diplomata</h4>
-            <p class="quest-desc">
+            <p class="achievement-desc">
               Completar 5 missões sociais em uma única semana.
             </p>
           </div>
           <div><span class="rarity-badge rarity-raro">Raro</span></div>
         </div>
 
-        <div class="card quest-item-card">
+        <div class="card achievement-card">
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #3b82f6; margin-bottom: 10px"
-              >speed</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >speed</span
             >
             <h4>Slayer de Procrastinação</h4>
-            <p class="quest-desc">
+            <p class="achievement-desc">
               Não deixar nenhuma missão pendente por 3 dias seguidos.
             </p>
           </div>
           <div><span class="rarity-badge rarity-raro">Raro</span></div>
         </div>
 
-        <div class="card quest-item-card">
+        <div class="card achievement-card">
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #a855f7; margin-bottom: 10px"
-              >psychology</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >psychology</span
             >
             <h4>Mente de Titânio</h4>
-            <p class="quest-desc">
+            <p class="achievement-desc">
               Atingir Nível 10 no atributo "Conhecimento".
             </p>
           </div>
           <div><span class="rarity-badge rarity-epico">Épico</span></div>
         </div>
 
-        <div class="card quest-item-card">
+        <div class="card achievement-card">
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #a855f7; margin-bottom: 10px"
-              >local_fire_department</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >local_fire_department</span
             >
             <h4>Berserker</h4>
-            <p class="quest-desc">
+            <p class="achievement-desc">
               Completar 10 missões em um único dia (Dia super produtivo).
             </p>
           </div>
           <div><span class="rarity-badge rarity-epico">Épico</span></div>
         </div>
 
-        <div class="card quest-item-card">
+        <div class="card achievement-card">
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #eab308; margin-bottom: 10px"
-              >trending_up</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >trending_up</span
             >
             <h4>Lobo de Wall Street</h4>
-            <p class="quest-desc">
+            <p class="achievement-desc">
               Completar 30 missões da categoria "Finanças".
             </p>
           </div>
           <div><span class="rarity-badge rarity-lendario">Lendário</span></div>
         </div>
 
-        <div class="card quest-item-card">
+        <div class="card achievement-card">
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #eab308; margin-bottom: 10px"
-              >auto_awesome</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >auto_awesome</span
             >
             <h4>Polímata</h4>
-            <p class="quest-desc">
+            <p class="achievement-desc">
               Ter todos os atributos (Saúde, Carreira, etc.) acima do nível 5.
             </p>
           </div>
           <div><span class="rarity-badge rarity-lendario">Lendário</span></div>
         </div>
 
-        <div
-          class="card quest-item-card"
-          style="
-            border: 1px solid rgba(239, 68, 68, 0.5);
-            box-shadow: 0 0 15px rgba(239, 68, 68, 0.1);
-          "
-        >
+        <div class="card achievement-card mythic">
+          <!-- Adicionada classe 'mythic' para estilos específicos (borda e sombra via CSS) -->
           <div>
-            <i
-              class="material-icons-round"
-              style="font-size: 2.5rem; color: #ef4444; margin-bottom: 10px"
-              >whatshot</i
+            <span
+              class="material-icons-round achievement-icon"
+              aria-hidden="true"
+              >whatshot</span
             >
             <h4>Level 100 Boss</h4>
-            <p class="quest-desc">Atingir o nível 100 do personagem global.</p>
+            <p class="achievement-desc">
+              Atingir o nível 100 do personagem global.
+            </p>
           </div>
           <div><span class="rarity-badge rarity-mitico">Mítico</span></div>
         </div>

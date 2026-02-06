@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameLife - Guilda</title>
     <link rel="stylesheet" href="src/styles/style.css" />
     <link
@@ -12,8 +13,9 @@
   <body>
     <header>
       <nav>
-        <div style="display: flex; align-items: center; gap: 15px">
-          <button id="menu-toggle-btn" class="btn-icon">
+        <div class="nav-left">
+          <!-- Estilo movido para CSS: display: flex; align-items: center; gap: 15px; -->
+          <button id="menu-toggle-btn" class="btn-icon" aria-label="Abrir menu">
             <span class="material-icons-round">menu</span>
           </button>
           <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
@@ -25,109 +27,156 @@
     <aside class="sidebar-drawer" id="mySidebar">
       <div class="sidebar-header">
         <div class="user-profile-box">
-          <img src="https://via.placeholder.com/100" alt="User" />
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Avatar do usuário"
+            loading="lazy"
+          />
           <div class="user-details">
             <h3 id="sidebar-name">Heroi</h3>
             <span id="sidebar-level">Lvl 1</span>
+            <div class="xp-bar-mini">
+              <!-- Adicionado para consistência com outros arquivos -->
+              <div class="xp-fill-mini" style="width: 0%"></div>
+            </div>
           </div>
         </div>
-        <button id="close-sidebar-btn">
+        <button id="close-sidebar-btn" aria-label="Fechar sidebar">
           <span class="material-icons-round">close</span>
         </button>
       </div>
       <hr class="sidebar-divider" />
       <ul class="sidebar-menu">
         <li>
-          <a href="index.html"
-            ><span class="material-icons-round">home</span><span>Home</span></a
-          >
+          <a href="index.html">
+            <span class="material-icons-round">home</span>
+            <span>Home</span>
+          </a>
         </li>
         <li>
-          <a href="quests.html"
-            ><span class="material-icons-round">task_alt</span
-            ><span>Missões</span></a
-          >
+          <a href="quests.html">
+            <span class="material-icons-round">task_alt</span>
+            <span>Missões</span>
+          </a>
         </li>
         <li>
-          <a href="character.html"
-            ><span class="material-icons-round">person</span
-            ><span>Personagem</span></a
-          >
+          <a href="character.html">
+            <span class="material-icons-round">person</span>
+            <span>Personagem</span>
+          </a>
         </li>
         <li>
-          <a href="friends.html"
-            ><span class="material-icons-round">group</span
-            ><span>Amigos</span></a
-          >
+          <a href="friends.html">
+            <span class="material-icons-round">group</span>
+            <span>Amigos</span>
+          </a>
         </li>
         <li>
-          <a href="ranking.html"
-            ><span class="material-icons-round">leaderboard</span
-            ><span>Ranking</span></a
-          >
+          <a href="ranking.html">
+            <span class="material-icons-round">leaderboard</span>
+            <span>Ranking</span>
+          </a>
         </li>
         <li>
-          <a href="challenges.html"
-            ><span class="material-icons-round">emoji_events</span
-            ><span>Desafios</span></a
-          >
+          <a href="challenges.html">
+            <span class="material-icons-round">emoji_events</span>
+            <span>Desafios</span>
+          </a>
         </li>
-        <li>
-          <a href="guild.html"
-            ><span class="material-icons-round">shield</span
-            ><span>Guilda</span></a
-          >
+        <li class="active">
+          <!-- Marcado como active para página atual -->
+          <a href="guild.html">
+            <span class="material-icons-round">shield</span>
+            <span>Guilda</span>
+          </a>
         </li>
       </ul>
       <div class="sidebar-footer">
-        <a href="settings.html" class="sidebar-link-footer"
-          ><span class="material-icons-round">settings</span> Config</a
-        >
-        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
-          ><span class="material-icons-round">logout</span> Sair</a
-        >
+        <a href="settings.html" class="sidebar-link-footer">
+          <span class="material-icons-round">settings</span> Configurações
+          <!-- Corrigido de "Config" -->
+        </a>
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger">
+          <span class="material-icons-round">logout</span> Sair
+        </a>
       </div>
     </aside>
 
     <main>
-      <div class="guild-header card">
-        <div class="guild-info">
-          <img
-            src="https://via.placeholder.com/80"
-            alt="Brasão"
-            style="border-radius: 12px"
-          />
-          <div>
-            <h2>Os Disciplinados</h2>
-            <p>Guilda Nível 5</p>
+      <section class="guild-section">
+        <!-- Envolvido em section para semântica e outline -->
+        <div class="guild-header card">
+          <div class="guild-info">
+            <img
+              src="https://via.placeholder.com/80"
+              alt="Brasão da guilda Os Disciplinados"
+              loading="lazy"
+              class="guild-emblem"
+            />
+            <!-- Estilo movido para CSS: border-radius: 12px; -->
+            <div>
+              <h2>Os Disciplinados</h2>
+              <p>Guilda Nível 5</p>
+            </div>
+          </div>
+          <button class="btn-primary" aria-label="Convidar membro">
+            Convidar
+          </button>
+        </div>
+        <div class="guild-layout">
+          <!-- Estilo movido para CSS: assumindo display: grid ou flex para layout -->
+          <div class="chat-section card">
+            <h3>Chat</h3>
+            <ul class="chat-box" role="log" aria-live="polite">
+              <!-- Usado ul para lista de mensagens, com ARIA para atualizações dinâmicas -->
+              <li class="msg"><strong>Marcus:</strong> E aí pessoal!</li>
+              <li class="msg self"><strong>Você:</strong> Bora focar!</li>
+            </ul>
+            <div class="chat-input">
+              <input
+                type="text"
+                id="chat-message"
+                placeholder="Digite sua mensagem..."
+                aria-label="Digite sua mensagem"
+              />
+              <!-- Adicionado id, placeholder e aria-label -->
+              <button class="btn-icon" aria-label="Enviar mensagem">
+                <span class="material-icons-round">send</span>
+                <!-- Trocado '>' por ícone semântico -->
+              </button>
+            </div>
+          </div>
+          <div class="members-section card">
+            <h3>Membros</h3>
+            <ul class="member-list" role="list">
+              <li>
+                <span
+                  class="status-dot online"
+                  aria-label="Online"
+                  title="Online"
+                ></span>
+                Marcus
+              </li>
+              <li>
+                <span
+                  class="status-dot online"
+                  aria-label="Online"
+                  title="Online"
+                ></span>
+                Você
+              </li>
+            </ul>
           </div>
         </div>
-        <button class="btn-primary">Convidar</button>
-      </div>
-      <div class="guild-layout">
-        <div class="chat-section card">
-          <h3>Chat</h3>
-          <div class="chat-box">
-            <div class="msg"><strong>Marcus:</strong> E aí pessoal!</div>
-            <div class="msg self"><strong>Você:</strong> Bora focar!</div>
-          </div>
-          <div class="chat-input">
-            <input type="text" /><button class="btn-icon">></button>
-          </div>
-        </div>
-        <div class="members-section card">
-          <h3>Membros</h3>
-          <ul class="member-list">
-            <li><span class="status-dot online"></span> Marcus</li>
-            <li><span class="status-dot online"></span> Você</li>
-          </ul>
-        </div>
-      </div>
+      </section>
     </main>
 
     <footer>
-      <div class="footer-container"><p>&copy; 2025 GameLife.</p></div>
+      <div class="footer-container">
+        <p>&copy; 2025 GameLife.</p>
+      </div>
     </footer>
+
     <script src="src/script/sidebar.js"></script>
   </body>
 </html>

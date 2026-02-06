@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameLife - Ranking</title>
     <link rel="stylesheet" href="src/styles/style.css" />
     <link
@@ -12,8 +13,9 @@
   <body>
     <header>
       <nav>
-        <div style="display: flex; align-items: center; gap: 15px">
-          <button id="menu-toggle-btn" class="btn-icon">
+        <div class="nav-left">
+          <!-- Estilo movido para CSS: display: flex; align-items: center; gap: 15px; -->
+          <button id="menu-toggle-btn" class="btn-icon" aria-label="Abrir menu">
             <span class="material-icons-round">menu</span>
           </button>
           <a href="index.html" id="logo-nav">GAME<span>LIFE</span></a>
@@ -25,106 +27,159 @@
     <aside class="sidebar-drawer" id="mySidebar">
       <div class="sidebar-header">
         <div class="user-profile-box">
-          <img src="https://via.placeholder.com/100" alt="User" />
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Avatar do usuário"
+            loading="lazy"
+          />
           <div class="user-details">
             <h3 id="sidebar-name">Heroi</h3>
             <span id="sidebar-level">Lvl 1</span>
+            <div class="xp-bar-mini">
+              <!-- Adicionado para consistência com outros arquivos -->
+              <div class="xp-fill-mini" style="width: 0%"></div>
+            </div>
           </div>
         </div>
-        <button id="close-sidebar-btn">
+        <button id="close-sidebar-btn" aria-label="Fechar sidebar">
           <span class="material-icons-round">close</span>
         </button>
       </div>
       <hr class="sidebar-divider" />
       <ul class="sidebar-menu">
         <li>
-          <a href="index.html"
-            ><span class="material-icons-round">home</span><span>Home</span></a
-          >
+          <a href="index.html">
+            <span class="material-icons-round">home</span>
+            <span>Home</span>
+          </a>
         </li>
         <li>
-          <a href="quests.html"
-            ><span class="material-icons-round">task_alt</span
-            ><span>Missões</span></a
-          >
+          <a href="quests.html">
+            <span class="material-icons-round">task_alt</span>
+            <span>Missões</span>
+          </a>
         </li>
         <li>
-          <a href="character.html"
-            ><span class="material-icons-round">person</span
-            ><span>Personagem</span></a
-          >
+          <a href="character.html">
+            <span class="material-icons-round">person</span>
+            <span>Personagem</span>
+          </a>
         </li>
         <li>
-          <a href="friends.html"
-            ><span class="material-icons-round">group</span
-            ><span>Amigos</span></a
-          >
+          <a href="friends.html">
+            <span class="material-icons-round">group</span>
+            <span>Amigos</span>
+          </a>
+        </li>
+        <li class="active">
+          <!-- Marcado como active para página atual -->
+          <a href="ranking.html">
+            <span class="material-icons-round">leaderboard</span>
+            <span>Ranking</span>
+          </a>
         </li>
         <li>
-          <a href="ranking.html"
-            ><span class="material-icons-round">leaderboard</span
-            ><span>Ranking</span></a
-          >
+          <a href="challenges.html">
+            <span class="material-icons-round">emoji_events</span>
+            <span>Desafios</span>
+          </a>
         </li>
         <li>
-          <a href="challenges.html"
-            ><span class="material-icons-round">emoji_events</span
-            ><span>Desafios</span></a
-          >
-        </li>
-        <li>
-          <a href="guild.html"
-            ><span class="material-icons-round">shield</span
-            ><span>Guilda</span></a
-          >
+          <a href="guild.html">
+            <span class="material-icons-round">shield</span>
+            <span>Guilda</span>
+          </a>
         </li>
       </ul>
       <div class="sidebar-footer">
-        <a href="settings.html" class="sidebar-link-footer"
-          ><span class="material-icons-round">settings</span> Config</a
-        >
-        <a href="#" id="logout-btn" class="sidebar-link-footer danger"
-          ><span class="material-icons-round">logout</span> Sair</a
-        >
+        <a href="settings.html" class="sidebar-link-footer">
+          <span class="material-icons-round">settings</span> Configurações
+          <!-- Corrigido de "Config" -->
+        </a>
+        <a href="#" id="logout-btn" class="sidebar-link-footer danger">
+          <span class="material-icons-round">logout</span> Sair
+        </a>
       </div>
     </aside>
 
     <main>
       <h1>Ranking Global</h1>
-      <div class="podium-container">
-        <div class="podium-place second">
-          <img src="https://via.placeholder.com/150" alt="2nd" />
-          <div class="rank-badge silver">2</div>
-          <strong>Marcus</strong>
+      <section class="podium-section">
+        <!-- Envolvido em section para semântica -->
+        <div class="podium-container">
+          <!-- Estilo movido para CSS: assumindo display: flex; justify-content: center; -->
+          <div class="podium-place second">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Avatar do 2º colocado Marcus"
+              loading="lazy"
+            />
+            <div class="rank-badge silver">2</div>
+            <strong>Marcus</strong>
+          </div>
+          <div class="podium-place first">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Avatar do 1º colocado Lucas"
+              loading="lazy"
+            />
+            <div class="rank-badge gold">1</div>
+            <strong>Lucas</strong>
+          </div>
+          <div class="podium-place third">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Avatar do 3º colocado Julia"
+              loading="lazy"
+            />
+            <div class="rank-badge bronze">3</div>
+            <strong>Julia</strong>
+          </div>
         </div>
-        <div class="podium-place first">
-          <img src="https://via.placeholder.com/150" alt="1st" />
-          <div class="rank-badge gold">1</div>
-          <strong>Lucas</strong>
-        </div>
-        <div class="podium-place third">
-          <img src="https://via.placeholder.com/150" alt="3rd" />
-          <div class="rank-badge bronze">3</div>
-          <strong>Julia</strong>
-        </div>
-      </div>
+      </section>
 
-      <div class="ranking-list card">
-        <div class="ranking-row header">
-          <span>#</span><span>Usuário</span><span>XP</span>
-        </div>
-        <div class="ranking-row">
-          <span>4</span><span>Ana Clara</span><span>12,400</span>
-        </div>
-        <div class="ranking-row highlight-me">
-          <span>42</span><span>VOCÊ</span><span>850</span>
-        </div>
-      </div>
+      <section class="ranking-list-section">
+        <!-- Envolvido em section para semântica -->
+        <table
+          class="ranking-list card"
+          role="table"
+          aria-label="Tabela de ranking global"
+        >
+          <!-- Transformado em table para semântica tabular -->
+          <caption class="sr-only">
+            Ranking de usuários por XP
+          </caption>
+          <!-- Caption oculta via CSS para acessibilidade -->
+          <thead>
+            <tr class="ranking-row header">
+              <th scope="col">#</th>
+              <th scope="col">Usuário</th>
+              <th scope="col">XP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="ranking-row">
+              <td>4</td>
+              <td>Ana Clara</td>
+              <td>12,400</td>
+            </tr>
+            <tr class="ranking-row highlight-me" aria-current="true">
+              <!-- Adicionado aria-current para indicação de posição do usuário -->
+              <td>42</td>
+              <td>VOCÊ</td>
+              <td>850</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
 
     <footer>
-      <div class="footer-container"><p>&copy; 2025 GameLife.</p></div>
+      <div class="footer-container">
+        <p>&copy; 2025 GameLife.</p>
+      </div>
     </footer>
+
     <script src="src/script/sidebar.js"></script>
   </body>
 </html>
