@@ -1342,8 +1342,8 @@ textarea {
   line-height: 1.1;
   background: linear-gradient(
     135deg,
-    var(--text-primary),
-    var(--color-primary-light)
+    var(--color-primary),
+    var(--bg-body)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
