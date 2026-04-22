@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#454747",
+                    "surface-bright": "#393939",
+                    "primary": "#53e076",
+                    "on-primary-fixed": "#002108",
+                    "on-background": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#464747",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-primary-container": "#004118",
+                    "background": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#72fe8f",
+                    "on-secondary": "#2f3131",
+                    "on-primary-fixed-variant": "#005320",
+                    "outline": "#869585",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#53e076",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "surface-variant": "#353534",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-primary": "#003914",
+                    "surface-container-highest": "#353534",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "surface": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "surface-tint": "#53e076",
+                    "primary-container": "#1db954",
+                    "secondary": "#c6c6c7",
+                    "tertiary-container": "#a1a1a1",
+                    "tertiary-fixed": "#e3e2e2",
+                    "tertiary": "#c7c6c6",
+                    "outline-variant": "#3d4a3d",
+                    "inverse-primary": "#006e2d",
+                    "on-secondary-container": "#b4b5b5",
+                    "error-container": "#93000a",
+                    "surface-dim": "#131313",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-tertiary-container": "#373838",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#c7c6c6",
+                    "surface-container": "#201f1f",
+                    "on-surface-variant": "#bccbb9",
+                    "on-surface": "#e5e2e1",
+                    "on-tertiary": "#2f3131"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "xl": "32px",
+                    "unit": "8px",
+                    "margin": "32px",
+                    "lg": "24px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-muted": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-bold": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-muted": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121212;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3e3e3e;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="text-on-background min-h-screen flex flex-col items-center custom-scrollbar">
+<!-- Header / TopAppBar -->
+<header class="flex items-center justify-center w-full bg-zinc-950 border-none pt-8 pb-4"><div class="flex items-center gap-1.5">
+<svg class="w-[40px] h-[40px]" fill="#1DB954" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.492 17.311c-.216.353-.674.464-1.026.248-2.853-1.743-6.444-2.138-10.672-1.171-.403.092-.806-.164-.898-.567-.092-.403.164-.806.567-.898 4.636-1.059 8.608-.604 11.781 1.34.352.216.464.674.248 1.048zm1.464-3.255c-.272.441-.85.581-1.291.31-3.266-2.008-8.245-2.591-12.107-1.42-.5.152-1.028-.133-1.18-.633-.151-.5.133-1.027.633-1.18 4.417-1.34 9.907-.68 13.635 1.611.441.272.581.85.31 1.291zm.126-3.41c-3.918-2.327-10.375-2.541-14.156-1.393-.6.183-1.238-.158-1.42-.758-.182-.6.158-1.238.758-1.42 4.34-1.318 11.462-1.066 16.002 1.63.538.318.718 1.012.4 1.55-.318.538-1.012.718-1.55.4z"></path>
+</svg>
+<span class="text-white text-[28px] font-bold tracking-tighter leading-none">Spotify</span>
+</div></header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center w-full px-4 py-xl bg-gradient-to-b from-zinc-900 to-[#121212]">
+<div class="w-full max-w-[450px] bg-surface-container-lowest p-xl rounded-lg shadow-2xl flex flex-col items-center">
+<h1 class="text-white font-headline-lg text-headline-lg mb-xl text-center">Log in to Spotify</h1>
+<!-- Social Login Buttons -->
+<div class="w-full space-y-md">
+<button class="w-full flex items-center justify-center gap-md py-md px-lg border border-outline rounded-full font-label-bold text-label-bold text-white hover:border-white transition-colors group">
+<span class="material-symbols-outlined" data-icon="google" style="font-variation-settings: 'FILL' 0;">google</span>
+<span>Continue with Google</span>
+</button>
+<button class="w-full flex items-center justify-center gap-md py-md px-lg border border-outline rounded-full font-label-bold text-label-bold text-white hover:border-white transition-colors group">
+<span class="material-symbols-outlined" data-icon="facebook" style="font-variation-settings: 'FILL' 1;">social_leaderboard</span>
+<span>Continue with Facebook</span>
+</button>
+<button class="w-full flex items-center justify-center gap-md py-md px-lg border border-outline rounded-full font-label-bold text-label-bold text-white hover:border-white transition-colors group">
+<span class="material-symbols-outlined" data-icon="apple" style="font-variation-settings: 'FILL' 1;">ios</span>
+<span>Continue with Apple</span>
+</button>
+</div>
+<!-- Divider -->
+<div class="w-full flex items-center my-xl">
+<div class="flex-grow h-px bg-surface-container-highest"></div>
+<span class="px-md text-zinc-400 font-body-sm text-body-sm">or</span>
+<div class="flex-grow h-px bg-surface-container-highest"></div>
+</div>
+<!-- Login Form -->
+<form class="w-full flex flex-col gap-lg">
+<div class="space-y-sm">
+<label class="block text-white font-label-bold text-label-bold ml-xs">Email or username</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-md py-md text-white placeholder-zinc-500 focus:ring-1 focus:ring-white transition-all font-body-lg text-body-lg" placeholder="Email or username" type="text"/>
+</div>
+<div class="space-y-sm">
+<label class="block text-white font-label-bold text-label-bold ml-xs">Password</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-md py-md text-white placeholder-zinc-500 focus:ring-1 focus:ring-white transition-all font-body-lg text-body-lg" placeholder="Password" type="password"/>
+</div>
+<!-- Remember Me Toggle -->
+<div class="flex items-center gap-sm">
+<label class="relative inline-flex items-center cursor-pointer group">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-zinc-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+<span class="ml-sm text-white font-body-sm text-body-sm">Remember me</span>
+</label>
+</div>
+<button class="w-full py-md bg-primary-container text-on-primary-container font-headline-md text-headline-md rounded-full hover:scale-105 active:scale-95 transition-transform duration-200 mt-md">
+                    Log In
+                </button>
+</form>
+<!-- Links -->
+<div class="mt-xl flex flex-col items-center gap-lg">
+<a class="text-white font-body-sm text-body-sm hover:underline hover:text-primary transition-colors" href="#">Forgot your password?</a>
+<div class="w-full h-px bg-surface-container-highest"></div>
+<p class="text-zinc-400 font-body-sm text-body-sm">
+                    Don't have an account? 
+                    <a class="text-white font-label-bold text-label-bold hover:underline hover:text-primary ml-xs" href="#">Sign up for Spotify</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-wrap justify-center gap-x-4 gap-y-2 py-10 px-6 mt-auto bg-zinc-950 border-t border-zinc-900">
+<span class="text-zinc-500 font-body-sm text-[11px] tracking-wide w-full text-center mb-md">© 2024 Spotify AB</span>
+<div class="flex flex-wrap justify-center gap-x-4 gap-y-2">
+<a class="text-zinc-500 font-body-sm text-[11px] tracking-wide hover:text-primary-container transition-colors" href="#">Legal</a>
+<a class="text-zinc-500 font-body-sm text-[11px] tracking-wide hover:text-primary-container transition-colors" href="#">Privacy Center</a>
+<a class="text-zinc-500 font-body-sm text-[11px] tracking-wide hover:text-primary-container transition-colors" href="#">Privacy Policy</a>
+<a class="text-zinc-500 font-body-sm text-[11px] tracking-wide hover:text-primary-container transition-colors" href="#">Cookies</a>
+<a class="text-zinc-500 font-body-sm text-[11px] tracking-wide hover:text-primary-container transition-colors" href="#">About Ads</a>
+<a class="text-zinc-500 font-body-sm text-[11px] tracking-wide hover:text-primary-container transition-colors" href="#">Accessibility</a>
+</div>
+</footer>
+</body></html>
